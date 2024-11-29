@@ -11,9 +11,9 @@ const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-  origin: process.env.CORS_ORIGIN,
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type']
+  origin: ['https://imaginative-torrone-45d6c5.netlify.app', 'http://localhost:5173'],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
